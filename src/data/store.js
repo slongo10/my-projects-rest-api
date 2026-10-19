@@ -36,7 +36,7 @@ export function getProjectById(id) {
   return project ? clone(project) : null
 }
 
-export function creatProject(input) {
+export function createProject(input) {
   const timestamp = nowIso()
   const project = {
     id: nextProjectId,
