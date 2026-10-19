@@ -4,7 +4,7 @@ export class ApiError extends Error {
     this.name = 'ApiError'
     this.status = status
     this.code = code
-    this.detail = details
+    this.details = details
   }
 }
 
