@@ -21,8 +21,8 @@ let tasks = [
   {
     id: 1,
     project_id: 1,
-    title: 'Draft homepage wireframes',
-    description: 'Create desktopand mobile layout drafts',
+    title: 'Build personal portfolio website',
+    description: 'Create a website to showcase my IT skills and projects',
     status: 'in_progress',
     created_at: seededAt,
     updated_at: seededAt,
@@ -30,8 +30,8 @@ let tasks = [
   {
     id: 2,
     project_id: 1,
-    title: 'Collect new screenshots',
-    description: 'Replace old Portfolio images',
+    title: 'Add certifications and projects',
+    description: 'Upload certifications and completed school projects',
     status: 'todo',
     created_at: seededAt,
     updated_at: seededAt,
@@ -39,8 +39,8 @@ let tasks = [
   {
     id: 3,
     project_id: 2,
-    title: 'Finalize slide deck',
-    description: 'Include examples of good API design',
+    title: 'Test API Error response',
+    description: 'Check API requests and verify that errors return correctly',
     status: 'done',
     created_at: seededAt,
     updated_at: seededAt,
