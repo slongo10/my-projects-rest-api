@@ -19,7 +19,7 @@ export async function createUser(db, { email, passwordHash }) {
       email: email.toLowerCase(),
       passwordHash,
       createdAt: timestamp,
-      upadtedAt: timestamp,
+      updatedAt: timestamp,
     })
     .returning()
 

@@ -58,7 +58,7 @@ export const sessions = sqliteTable(
       .notNull()
       .references(() => users.id, { onDelete: 'cascade' }),
     tokenHash: text('token_hash').notNull().unique(),
-    expiredAt: text('expires_at').notNull(),
+    expiresAt: text('expires_at').notNull(),
     createdAt: text('created_at').notNull(),
   },
   (table) => [

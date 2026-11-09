@@ -5,7 +5,7 @@ export async function hashPassword(plain) {
   return bcryptjs.hash(plain, BCRYPT_ROUNDS)
 }
 
-export async function varifyPassword(plain, hash) {
+export async function verifyPassword(plain, hash) {
   return bcryptjs.compare(plain, hash)
 }
 
