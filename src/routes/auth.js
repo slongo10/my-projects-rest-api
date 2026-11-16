@@ -1,7 +1,5 @@
 import { Hono } from 'hono'
 import { getDb } from '../data/db.js'
-import { rateLimitMiddleware } from '../middleware/rateLimit.js'
-
 import {
   createSession,
   deleteSessionByTokenHash,
@@ -26,9 +24,8 @@ import {
 } from '../utils/validation.js'
 
 const auth = new Hono()
-const authLimiter = rateLimitMiddleware('AUTH_LIMITER')
 
-auth.post('/register', authLimiter, async (c) => {
+auth.post('/register', async (c) => {
   const payload = await parseJsonBody(c)
   const details = validateRegister(payload)
 
@@ -62,7 +59,7 @@ auth.post('/register', authLimiter, async (c) => {
   )
 })
 
-auth.post('/login', authLimiter, async (c) => {
+auth.post('/login', async (c) => {
   const payload = await parseJsonBody(c)
   const details = validateLogin(payload)
 
@@ -114,7 +111,7 @@ auth.post('/login', authLimiter, async (c) => {
   })
 })
 
-auth.post('/refresh', authLimiter, async (c) => {
+auth.post('/refresh', async (c) => {
   const payload = await parseJsonBody(c)
   const details = validateRefresh(payload)
 
