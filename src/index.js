@@ -10,8 +10,8 @@ import { sendError } from './utils/response.js'
 const app = new Hono()
 const api = new Hono()
 
-app.use('*', async (caches, next) => {
-  caches.set('traceId', crypto.randomUUID())
+app.use('*', async (c, next) => {
+  c.set('traceId', crypto.randomUUID())
   await next()
 })
 
